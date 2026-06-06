@@ -18,21 +18,7 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      packages.${system}.default = nixvim.legacyPackages.${system}.makeNixvim {
-        colorschemes.tokyonight = {
-          enable = true;
-          settings = {
-            style = "storm";
-          };
-        };
-        colorscheme = "tokyonight";
-        plugins = {
-          web-devicons.enable = true;
-          lualine.enable = true;
-          bufferline.enable = true;
-          neo-tree.enable = true;
-        };
-      };
+      packages.${system}.default = nixvim.legacyPackages.${system}.makeNixvim (import ./config.nix);
     };
 }
 
