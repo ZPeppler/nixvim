@@ -20,6 +20,7 @@
           system = "x86_64-linux";
         };
         modules = [
+          nixvim.homeModules.nixvim
           ./config.nix
         ];
       };
