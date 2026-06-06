@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.file.".config/tmux/custom".source = ./custom;
   programs.tmux = {
@@ -55,7 +55,6 @@
       tmuxPlugins.tmux-floax
       tmuxPlugins.yank
       tmuxPlugins.vim-tmux-navigator
-      inputs.tmux-nerd-font-window-name.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

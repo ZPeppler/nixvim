@@ -4,7 +4,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     nixvim.url = "github:nix-community/nixvim";
-    tmux-nerd-font-window-name.url = "github:joshmedeski/tmux-nerd-font-window-name";
   };
   outputs =
     {
@@ -12,7 +11,6 @@
       nixpkgs,
       nixvim,
       home-manager,
-      tmux-nerd-font-window-name,
     }:
     {
       homeConfigurations."zpeppler" = home-manager.lib.homeManagerConfiguration {
