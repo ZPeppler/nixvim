@@ -18,16 +18,15 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
-      hmConfig = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./config.nix
-          nixvim.homeManagerModules.nixvim
-        ];
-      };
     in
     {
-      packages.${system}.default = hmConfig.config.programs.nixvim.package;
+      home-manager.lib.homeManagerConfiguration = {
+        inherit pkgs;
+        modules = [
+          nixvim.homeManagerModules.nixvim
+          ./config.nix
+        ];
+      };
     };
 }
 
