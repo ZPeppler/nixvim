@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./settings
+  ];
   colorschemes.tokyonight = {
     enable = true;
     settings = {
