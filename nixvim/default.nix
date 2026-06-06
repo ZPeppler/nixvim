@@ -2,6 +2,8 @@
   imports = [
     ./editor
     ./settings
+    ./lsp
+    ./ui
   ];
   colorschemes.tokyonight = {
     enable = true;
