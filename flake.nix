@@ -12,6 +12,7 @@
       nixpkgs,
       nixvim,
       home-manager,
+      tmux-nerd-font-window-name,
     }:
     {
       homeConfigurations."zpeppler" = home-manager.lib.homeManagerConfiguration {
