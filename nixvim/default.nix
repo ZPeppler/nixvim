@@ -1,9 +1,11 @@
+{ inputs, ... }:
 {
   imports = [
     ./editor
     ./settings
     ./lsp
     ./ui
+    inputs.nixvim.homeModules.nixvim
   ];
   colorschemes.tokyonight = {
     enable = true;
