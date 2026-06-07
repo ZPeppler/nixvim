@@ -1,10 +1,26 @@
 { pkgs, ... }:
 {
-  # home.username = "zpeppler";
-  # home.homeDirectory = "/home/zpeppler";
-  # home.stateVersion = "26.05";
   imports = [
-    ./nixvim
+    ./editor
+    ./settings
+    ./lsp
+    ./ui
   ];
+  colorschemes.tokyonight = {
+    enable = true;
+    settings = {
+      style = "storm";
+    };
+  };
+  colorscheme = "tokyonight";
+  plugins = {
+    web-devicons.enable = true;
+    tmux-navigator.enable = true;
+    fugitive.enable = true;
+    neotest = {
+      enable = true;
+      adapters.plenary.enable = true;
+    };
+  };
 }
 
