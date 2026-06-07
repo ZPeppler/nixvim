@@ -17,10 +17,9 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      packages.${system}.default = nixvim.legacyPackages.${system}.makeNixvim {
-        pkgs = pkgs;
-        module = import ./config.nix;
-      };
+      packages.${system}.default = nixvim.legacyPackages.${system}.makeNixvim (
+        import ./config.nix { inherit pkgs; }
+      );
     };
   # {
   #   homeConfigurations."zpeppler" = home-manager.lib.homeManagerConfiguration {

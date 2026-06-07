@@ -1,27 +1,24 @@
 {
-  programs.nixvim = {
+  imports = [
+    ./editor
+    ./settings
+    ./lsp
+    ./ui
+  ];
+  colorschemes.tokyonight = {
     enable = true;
-    imports = [
-      ./editor
-      ./settings
-      ./lsp
-      ./ui
-    ];
-    colorschemes.tokyonight = {
-      enable = true;
-      settings = {
-        style = "storm";
-      };
+    settings = {
+      style = "storm";
     };
-    colorscheme = "tokyonight";
-    plugins = {
-      web-devicons.enable = true;
-      tmux-navigator.enable = true;
-      fugitive.enable = true;
-      neotest = {
-        enable = true;
-        adapters.plenary.enable = true;
-      };
+  };
+  colorscheme = "tokyonight";
+  plugins = {
+    web-devicons.enable = true;
+    tmux-navigator.enable = true;
+    fugitive.enable = true;
+    neotest = {
+      enable = true;
+      adapters.plenary.enable = true;
     };
   };
 }
