@@ -7,6 +7,7 @@
     oxfmt
     shfmt
     taplo
+    yamlfmt
   ];
 
   plugins.conform-nvim = {
@@ -25,7 +26,7 @@
         toml = [ "taplo" ];
         json = [ "oxfmt" ];
         jsonc = [ "oxfmt" ];
-        yaml = [ "oxfmt" ];
+        yaml = [ "yamlfmt" ];
         mdx = [ "oxfmt" ];
       };
     };
