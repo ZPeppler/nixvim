@@ -11,24 +11,32 @@ let
   };
 in
 {
-  plugins.persistence = {
-    enable = true;
-    settings = {
-      options = [
-        "buffers"
-        "curdir"
-        "options"
-        "tabpages"
-        "winsize"
-      ];
-      pre_save.__raw = ''
-        function()
-          local cwd = vim.fn.getcwd()
-          if cwd == vim.fn.expand("~") or cwd:match("/tmp") then
-            return false
+  plugins = {
+    persistence = {
+      enable = true;
+      settings = {
+        options = [
+          "buffers"
+          "curdir"
+          "options"
+          "tabpages"
+          "winsize"
+        ];
+        pre_save.__raw = ''
+          function()
+            local cwd = vim.fn.getcwd()
+            if cwd == vim.fn.expand("~") or cwd:match("/tmp") then
+              return false
+            end
           end
-        end
-      '';
+        '';
+      };
+    };
+    snacks = {
+      enable = true;
+      settings = {
+        images.enabled = true;
+      };
     };
   };
   extraPlugins = [ sshfs-nvim ];
