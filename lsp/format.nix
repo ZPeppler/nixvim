@@ -26,7 +26,10 @@
         toml = [ "taplo" ];
         json = [ "oxfmt" ];
         jsonc = [ "oxfmt" ];
-        "yaml.ansible" = [ "ansible_lint" "yamlfmt" { stop_after_first = true; } ];
+        "yaml.ansible" = [
+          "ansible_lint"
+          "yamlfmt"
+        ];
         yaml = [ "yamlfmt" ];
         mdx = [ "oxfmt" ];
       };
