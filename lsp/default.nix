@@ -1,5 +1,6 @@
 {
   imports = [
+    ./format.nix
     ./servers.nix
     ./treesitter.nix
   ];
