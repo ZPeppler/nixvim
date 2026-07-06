@@ -22,6 +22,7 @@ in
     docker-compose-language-service
     typescript-language-server
     bash-language-server
+    yaml-language-server
     vscode-langservers-extracted
     powershell-editor-services
   ];
@@ -44,7 +45,6 @@ in
           };
         };
       };
-      yamlls.enable = false;
       ansiblels = {
         enable = true;
         package = pkgs.ansible-language-server;
@@ -86,6 +86,7 @@ in
       };
       taplo.enable = true;
       jsonls.enable = true;
+      yamlls.enable = true;
       dockerls.enable = true;
       docker_compose_language_service.enable = true;
       ts_ls.enable = true;

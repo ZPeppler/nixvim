@@ -18,12 +18,6 @@
     			[sev.HINT] = " ",
     		},
     	},
-      filter = function(diagnostic)
-        if diagnostic.source == "ansible-lint" and diagnostic.code == "yaml[empty-lines]" then
-          return false
-        end
-        return true
-      end
     })
   '';
 }
