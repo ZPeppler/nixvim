@@ -17,6 +17,11 @@
         lsp_format = "fallback";
         timeout_ms = 500;
       };
+      formatters = {
+        ansible_lint = {
+          command = "$HOME/.venv/bin/ansible-lint";
+        };
+      };
       formatters_by_ft = {
         "*" = [ "trim_whitespace" ];
         nix = [ "nixfmt" ];
