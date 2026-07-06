@@ -18,6 +18,7 @@
         timeout_ms = 500;
       };
       formatters_by_ft = {
+        "*" = [ "trim_whitespace" ];
         nix = [ "nixfmt" ];
         markdown = [ "oxfmt" ];
         sh = [ "shfmt" ];
