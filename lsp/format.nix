@@ -28,7 +28,6 @@
         jsonc = [ "oxfmt" ];
         "yaml.ansible" = [
           "ansible_lint"
-          "yamlfmt"
         ];
         yaml = [ "yamlfmt" ];
         mdx = [ "oxfmt" ];
