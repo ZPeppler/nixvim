@@ -44,6 +44,7 @@ in
           };
         };
       };
+      yamlls.enable = false;
       ansiblels = {
         enable = true;
         package = pkgs.ansible-language-server;
