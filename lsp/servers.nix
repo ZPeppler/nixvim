@@ -22,7 +22,6 @@ in
     docker-compose-language-service
     typescript-language-server
     bash-language-server
-    yaml-language-server
     vscode-langservers-extracted
     powershell-editor-services
   ];
