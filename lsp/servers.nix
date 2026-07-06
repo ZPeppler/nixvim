@@ -99,15 +99,6 @@ in
     require("powershell").setup({
       bundle_path="${pkgs.powershell-editor-services}/share/powershell-editor-services",
     })
-
-    vim.diagnostic.config({
-      filter = function(diagnostic)
-        if diagnostic.source == "ansible-lint" and diagnostic.code == "yaml[empty-lines]" then
-          return false
-        end
-        return true
-      end
-    })
   '';
   filetype = {
     extension = {
